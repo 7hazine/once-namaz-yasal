@@ -34,6 +34,7 @@
     <tr><td>Namaz katılım kayıtları (tarih, vakit)</td><td>Öğrenci</td><td>Uygulamanın temel işlevi</td></tr>
     <tr><td>Ders ve oyun ilerlemesi</td><td>Öğrenci</td><td>Elifba öğrenme modülü, sıralamalar</td></tr>
     <tr><td>Veli onay PIN'i</td><td>Veli</td><td>Velinin evde kılınan namazı onaylaması</td></tr>
+    <tr><td><strong>İmzalı veli onay belgesi</strong> (taranmış görüntü)</td><td>Veli</td><td>Açık rızanın belgelenmesi; kayıt bu belge yüklenmeden aktifleşmez</td></tr>
     <tr><td>Kullanıcı adı, görünen ad, okul</td><td>Öğretmen / yönetici</td><td>Uygulamaya giriş</td></tr>
   </tbody>
 </table>
@@ -45,6 +46,10 @@
   <li><strong>Reklam ve analiz yapılmaz.</strong> Uygulamada hiçbir reklam ağı, analitik veya kullanıcı izleme aracı bulunmaz.</li>
   <li>Telefon rehberi, çağrı kaydı, SMS veya cihazdaki diğer dosyalar okunmaz.</li>
 </ul>
+
+<h3>Kayıt nasıl başlar</h3>
+<p>Öğretmen bir öğrenci eklediğinde kayıt <strong>beklemede</strong> açılır ve hiçbir namaz kaydı tutulamaz. Veliden imzalı onay alınıp belgesi sisteme yüklendikten sonra kayıt aktifleşir.</p>
+<p>Veli rızasını dilediği zaman geri çekebilir; bu durumda kayıt yeniden beklemeye döner ve veri toplanması durur. Kaydın tamamen silinmesi için <a href="veri-silme.html">veri silme sayfasına</a> bakın.</p>
 
 <h2>3. Uygulamanın istediği izinler</h2>
 <div class="scroll">
@@ -92,6 +97,9 @@ inceleme tamamlandığında bu bölüme eklenecektir.</p>
   <li>Giriş şifreleri düz metin olarak değil, <strong>bcrypt</strong> özeti olarak saklanır.</li>
   <li>Veritabanındaki her tabloda satır düzeyinde güvenlik (RLS) açıktır; hiçbir tabloya uygulamadan doğrudan erişilemez, yalnızca yetkisi denetlenen sunucu fonksiyonları üzerinden erişilir.</li>
   <li>Veli PIN'inde ardışık hatalı denemeler geçici kilitle sonuçlanır.</li>
+  <li><strong>Öğrenci fotoğrafları ve onay belgeleri herkese açık adreslerde tutulmaz.</strong> Bu dosyalar kapalı alanlarda saklanır; görüntülenmeleri için her seferinde kısa ömürlü bir adres üretilir ve bu adres yalnızca yetkisi sunucuda doğrulanan kullanıcıya verilir.</li>
+  <li>Onay belgeleri öğrenci fotoğraflarından <strong>ayrı</strong> bir alanda saklanır ve yalnızca okuldaki yetkili personel görebilir.</li>
+  <li>Öğrenci kaydı silindiğinde fotoğrafı ve onay belgesi de sunucudan kalıcı olarak silinir.</li>
   <li>Yedekler şifrelenerek saklanır.</li>
 </ul>
 
