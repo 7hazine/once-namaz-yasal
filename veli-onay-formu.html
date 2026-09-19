@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veli Aydınlatma ve Açık Rıza Formu — önce NAMAZ</title>
+<style>
+  /* Bu sayfa yazdırılmak üzere tasarlandı: ekranda okunur, kâğıda düzgün döker.
+     Renk değil siyah-beyaz, A4, iki sayfayı geçmeyecek yoğunlukta. */
+  :root { --ink:#16181F; --muted:#585C6B; --rule:#C9CCD6; --soft:#F4F5F9; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 28px 24px 64px; max-width: 780px;
+    background: #fff; color: var(--ink);
+    font: 15px/1.55 "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .arac {
+    background: var(--soft); border: 1px solid var(--rule); border-radius: 10px;
+    padding: 14px 16px; margin-bottom: 26px; font-size: 14px; color: var(--muted);
+  }
+  .arac b { color: var(--ink); }
+  button {
+    font: inherit; font-weight: 600; cursor: pointer; margin-top: 10px;
+    background: var(--ink); color: #fff; border: 0; border-radius: 7px; padding: 9px 16px;
+  }
+  h1 { font-size: 20px; line-height: 1.3; margin: 0 0 4px; text-align: center; }
+  .altbaslik { text-align: center; font-size: 13.5px; color: var(--muted); margin: 0 0 22px; }
+  h2 { font-size: 15px; margin: 20px 0 7px; padding-bottom: 4px; border-bottom: 1px solid var(--rule); }
+  p { margin: 0 0 9px; }
+  ul { margin: 0 0 9px; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  .bosluk { display: inline-block; min-width: 190px; border-bottom: 1px solid var(--ink); }
+
+  .onay { border: 1.5px solid var(--ink); border-radius: 8px; padding: 14px 16px; margin-top: 18px; }
+  .onay h2 { border: 0; margin-top: 0; text-align: center; font-size: 15.5px; }
+  .madde { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 11px; }
+  .kutu {
+    flex: 0 0 auto; width: 15px; height: 15px; border: 1.5px solid var(--ink);
+    margin-top: 3px; border-radius: 2px;
+  }
+  .madde p { margin: 0; font-size: 14.5px; }
+
+  .imza { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  .imza div { font-size: 14px; }
+  .imza .cizgi { display: block; border-bottom: 1px solid var(--ink); height: 26px; margin-top: 2px; }
+  .genis { grid-column: 1 / -1; }
+
+  footer { margin-top: 26px; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--muted); }
+
+  @media print {
+    body { padding: 0; max-width: none; font-size: 11.5pt; }
+    .arac { display: none; }
+    h1 { font-size: 15pt; }
+    h2 { font-size: 11.5pt; margin: 12pt 0 4pt; }
+    .onay { page-break-inside: avoid; }
+    .imza { page-break-inside: avoid; }
+    @page { size: A4; margin: 15mm 16mm; }
+  }
+</style>
+</head>
+<body>
+
+<div class="arac">
+  <p style="margin:0"><b>Öğretmenler için:</b> Bu formu yazdırıp veliye imzalatın. İmzalı aslı okulda dosyalanır; bir fotoğrafını çekip uygulamadaki öğrenci sayfasından yükleyin — kayıt ancak o zaman aktifleşir.</p>
+  <p style="margin:8px 0 0"><b>Köşeli parantezli yeri</b> kendi okul/kurum adınızla doldurun.</p>
+  <button onclick="window.print()">Yazdır</button>
+</div>
+
+<h1>“ÖNCE NAMAZ” UYGULAMASI<br>VELİ AYDINLATMA VE AÇIK RIZA METNİ</h1>
+<p class="altbaslik">Metin sürümü: <strong>2026-09-v1</strong></p>
+
+<p>Sayın Veli / Vasi,</p>
+<p>Öğrencilerimizin mescit katılımını takip etmek ve namaz alışkanlıklarını desteklemek amacıyla okulumuz/kurumumuz tarafından <strong>“önce NAMAZ”</strong> isimli dijital takip sistemi kullanılmaktadır. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) gereğince, çocuğunuzun kişisel verilerinin işlenmesi hakkında sizi bilgilendirmek ve yasal onayınızı almak istiyoruz.</p>
+
+<h2>1. Veri Sorumlusu ve Veri İşleyen</h2>
+<p>Bu süreçte <strong>Veri Sorumlusu</strong>, çocuğunuzun eğitim gördüğü <span class="bosluk"></span> kurumudur. “önce NAMAZ” uygulamasının geliştiricisi ve altyapı sağlayıcısı (Abdulhamit HAZİNE) ise yalnızca sistemi çalıştıran ve verileri kurumumuzun talimatıyla barındıran <strong>Veri İşleyen</strong> statüsündedir.</p>
+
+<h2>2. İşlenen Kişisel Veriler ve İşleme Amaçları</h2>
+<ul>
+  <li><strong>Kimlik ve eğitim verileri:</strong> Ad, soyad, okul, sınıf, şube, numara ve cinsiyet — uygulama içi kayıt, yoklama ve kimlik kartı basımı için.</li>
+  <li><strong>Özel nitelikli kişisel veri (inanç/ibadet verisi):</strong> Mescit katılım kayıtları, namaz kıldığı tarih ve vakit bilgileri — uygulamanın temel amacı olan katılım takibi için.</li>
+  <li><strong>Görsel veri:</strong> Öğrencinin fotoğrafı — yalnızca mescit girişinde okutulacak basılı QR kimlik kartının oluşturulması ve gerektiğinde öğretmen tarafından yeniden bastırılabilmesi için. <strong>İsteğe bağlıdır.</strong></li>
+  <li><strong>Uygulama verileri:</strong> Arapça / Elifba ders ve oyun ilerlemesi.</li>
+</ul>
+
+<h2>3. Verilerin Yurt Dışına Aktarımı</h2>
+<p>Verileriniz hiçbir surette reklam, pazarlama veya analitik amacıyla üçüncü taraflara satılmaz veya paylaşılmaz. Ancak uygulamanın yüksek güvenlik standartlarında ve kesintisiz çalışabilmesi için veritabanı altyapısı olarak <strong>Amazon Web Services (AWS) Frankfurt / Almanya (Avrupa Birliği)</strong> merkezli sunucular kullanılmaktadır. Çocuğunuzun verileri yalnızca bu uygulamanın çalışması amacıyla şifreli olarak bu sunucularda saklanacaktır.</p>
+
+<h2>4. Verilerin Saklanma Süresi ve Silinmesi</h2>
+<p>Çocuğunuzun verileri, okulumuzdaki kaydı devam ettiği veya siz aksini talep etmediğiniz sürece sistemde tutulur. Rızanızı geri çekmeniz veya kaydın silinmesini talep etmeniz hâlinde, çocuğunuza ait tüm veriler (fotoğraf ve katılım geçmişi dâhil) sistemden kalıcı olarak silinir; silme tarihinden önce alınmış yedeklerde en fazla <strong>90 gün</strong> kalabilir ve süre dolduğunda imha edilir.</p>
+
+<h2>5. Yasal Haklarınız</h2>
+<p>KVKK’nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenme amacını bilme, yanlış ise düzeltilmesini ve silinmesini talep etme hakkına sahipsiniz. Silme ve bilgi taleplerinizi doğrudan okulumuza / öğretmenimize iletebilirsiniz.</p>
+
+<div class="onay">
+  <h2>AÇIK RIZA BEYANI</h2>
+  <p style="font-size:14.5px">Yukarıdaki Aydınlatma Metni’ni okudum, anladım ve haklarım konusunda bilgilendirildim. Çocuğumun sisteme kaydının yapılmasına özgür irademle onay vererek aşağıdaki maddeleri kabul ediyorum:</p>
+
+  <div class="madde">
+    <span class="kutu"></span>
+    <p>Çocuğuma ait <strong>namaz / mescit katılım kayıtlarının</strong> (özel nitelikli kişisel veri) işlenmesine ve takip edilmesine onay veriyorum.</p>
+  </div>
+  <div class="madde">
+    <span class="kutu"></span>
+    <p>Çocuğuma ait <strong>fotoğrafın</strong>, mescit kimlik kartı basımı ve gerektiğinde yeniden bastırılması amacıyla sisteme yüklenmesine ve kaydı devam ettiği sürece saklanmasına onay veriyorum. <em>(İsteğe bağlı)</em></p>
+  </div>
+  <div class="madde">
+    <span class="kutu"></span>
+    <p>Uygulamanın altyapısı gereği, işlenen verilerin şifreli olarak <strong>Almanya’daki (AWS Frankfurt) sunucularda barındırılmasını</strong> — yurt dışına aktarımını — onaylıyorum.</p>
+  </div>
+
+  <div class="imza">
+    <div>Öğrencinin Adı Soyadı<span class="cizgi"></span></div>
+    <div>Sınıfı / Numarası<span class="cizgi"></span></div>
+    <div>Velinin Adı Soyadı<span class="cizgi"></span></div>
+    <div>Tarih<span class="cizgi"></span></div>
+    <div class="genis">İmza<span class="cizgi"></span></div>
+  </div>
+</div>
+
+<footer>
+  <p>önce NAMAZ · Mescid Takip Sistemi · Metin sürümü 2026-09-v1 · İmzalı aslı okulda dosyalanır.</p>
+</footer>
+
+</body>
+</html>
