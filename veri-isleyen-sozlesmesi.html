@@ -36,7 +36,7 @@
 <h2>4. Veri İşleyenin (uygulama geliştiricisi) yükümlülükleri</h2>
 <ul>
   <li>Veri İşleyen, aktarılan verileri yalnızca uygulamanın temel işlevi (namaz takip ve raporlama) amacıyla ve Veri Sorumlusu’nun uygulama arayüzündeki talimatları doğrultusunda işler. Verileri <strong>satmaz, pazarlama amacıyla kullanmaz ve üçüncü taraflarla paylaşmaz</strong>.</li>
-  <li>Sistem; satır düzeyi güvenlik (RLS), HTTPS şifreleme ve parolalar için bcrypt özetleme gibi teknik tedbirleri alır. Öğrenci fotoğrafları ve veli onay belgeleri herkese açık adreslerde tutulmaz; erişim sunucuda yetki doğrulanarak üretilen kısa ömürlü adreslerle sağlanır.</li>
+  <li>Sistem; satır düzeyi güvenlik (RLS), HTTPS şifreleme ve parolalar için bcrypt özetleme gibi teknik tedbirleri alır. Öğrenci fotoğrafları herkese açık adreslerde tutulmaz; erişim sunucuda yetki doğrulanarak üretilen kısa ömürlü adreslerle sağlanır. Veli açık rıza kayıtları veritabanında tutulur ve yalnızca öğrencinin okulundaki yetkili personele açıktır.</li>
   <li>Veri Sorumlusu sistemden bir öğrenciyi sildiğinde, Veri İşleyen bu verileri kalıcı olarak yok etmeyi ve bağlı tüm yedeklerden <strong>90 gün içinde</strong> tamamen temizlemeyi taahhüt eder.</li>
 </ul>
 
